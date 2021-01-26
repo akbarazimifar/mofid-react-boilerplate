@@ -1,6 +1,70 @@
-# Getting Started with Create React App
+🚧 NOTE: This Documentation is under construction 🚧
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+---
+
+# Getting Started with Mofid React Boilerplate
+
+This project is based on [Create React App](https://github.com/facebook/create-react-app).
+
+This is a boilerplate which is supposed to be a starter template for front-end teams of [Mofid Securities](emofid.ir) company.
+
+## Table of Content
+
+- [Packages](#Packages)
+- [`src` Directory Structure](#`src`-Directory-Structure)
+  - Hooks
+    - useDevice
+
+## Packages
+
+This project has some installed packages to facilitate the boring process of starting a project. Here is the list of them:
+
+### State Management Libraries
+
+- `redux`
+- `react-redux`
+- `redux-saga`
+- `redux-logger`
+- `redux-devtools-extension`
+
+### Style Libraries
+
+- `ant-design`
+- `styled-components`
+
+### Form Management Library
+
+- `react-hook-form`
+
+### Other
+
+- `axios` as HTTP client
+- `react-responsive` with `useDevice` hook
+- `react-router-dom`
+- `react-helmet`
+- `eslint` with `airbnb` rule and `prettier`
+
+## `src` Directory Structure
+
+### APIs
+
+There is a `index.js` file which contains axios interceptor. You can config axios and maniputlate request and response with interceptor.
+
+### Containers
+
+### Constants
+
+### Hooks
+
+Hooks of project should be added to this direcotry. There is a common `useDevice` hook in this directory
+
+#### useDevice
+
+this hook uses `react-responsive` under the hood and provide some properties which can be used to determine the user device resolution and make decision based on them.
+
+### Utils
+
+---
 
 ## Available Scripts
 
