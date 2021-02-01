@@ -30,7 +30,7 @@ This is a boilerplate which is supposed to be a starter template for front-end t
 
 This project has some installed packages to facilitate the boring process of starting a project. Here is the list of them:
 
-> **Note**: `react-app-rewired` is installed to customize webpack configs. But it's pure and doesn't change any webpack config right now.
+> **Note**: [`craco`](https://www.npmjs.com/package/@craco/craco) is installed to customize webpack configs.
 
 ### General Libraries
 
