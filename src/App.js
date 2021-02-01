@@ -1,6 +1,6 @@
-import * as Sentry from "@sentry/react";
-import logo from "./logo.svg";
-import "./App.css";
+import * as Sentry from '@sentry/react';
+import logo from './logo.svg';
+import './App.css';
 
 function FallbackComponent() {
   return <div>An error has occured.</div>;

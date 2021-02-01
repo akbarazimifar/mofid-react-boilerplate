@@ -7,6 +7,7 @@ dayjs.calendar('jalali');
 
 // Here you can add utility functions for dayjs
 
-const toLocalDate = (datetime, format = 'YYYY/M/D') => dayjs(datetime).format(format)
+const toLocalDate = (datetime, format = 'YYYY/M/D') =>
+  dayjs(datetime).format(format);
 
 export { toLocalDate };
