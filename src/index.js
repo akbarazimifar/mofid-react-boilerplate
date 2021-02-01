@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { Provider } from "react-redux";
+import * as Sentry from "@sentry/react";
 
 import configureStore from "./configureStore";
 
@@ -8,6 +9,17 @@ import "./index.css";
 import App from "./App";
 // eslint-disable-next-line import/no-named-as-default, import/no-named-as-default-member
 import reportWebVitals from "./reportWebVitals";
+
+if (
+  process.env.REACT_APP_SENTRY_ENABLED === "true" ||
+  process.env.NODE_ENV === "production"
+) {
+  Sentry.init({
+    // NOTE: Make sure you have valid dsn. otherwise your app will crash while tring to connect to Sentry Server
+    dsn: "__YOUR_DSN__",
+    release: `mofid-react-boilerplate@${process.env.REACT_APP_VERSION}`,
+  });
+}
 
 ReactDOM.render(
   <React.StrictMode>
