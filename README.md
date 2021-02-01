@@ -8,16 +8,39 @@ This project is based on [Create React App](https://github.com/facebook/create-r
 
 This is a boilerplate which is supposed to be a starter template for front-end teams of [Mofid Securities](emofid.ir) company.
 
+> **Note**: This boilerplate DOES NOT support TypeScript files. If you wanna use TS, you should add TS support manually.
+
 ## Table of Content
 
-- [Packages](#Packages)
-- [`src` Directory Structure](#`src`-Directory-Structure)
-  - Hooks
-    - useDevice
+- [Installed Packages](#Installed-Packages)
+  - [General Libraries](#General-Libraries)
+  - [State Management Libraries](#State-Management-Libraries)
+  - [Style Libraries](#Style-Libraries)
+  - [Form Management Library](#Form-Management-Library)
+  - [Lint Libraries and Dev Dependencies](#Lint-Libraries-and-Dev-Dependencies)
+- [Boilerplate Structure](#Boilerplate-Structure)
+  - [Hooks](#Hooks)
+    - `useDevice`
+  - [Utils](#Utils)
+    - `date`
+- [Available Scripts](#Available-Scripts)
+- [Learn More](#Learn-More)
 
-## Packages
+## Installed Packages
 
 This project has some installed packages to facilitate the boring process of starting a project. Here is the list of them:
+
+> **Note**: `react-app-rewired` is installed to customize webpack configs. But it's pure and doesn't change any webpack config right now.
+
+### General Libraries
+
+- `axios` as HTTP client
+- `react-responsive` with `useDevice` hook
+- `react-router-dom`
+- `react-helmet`
+- [`dayjs`](https://www.npmjs.com/package/dayjs) with [`jalaliday`](https://www.npmjs.com/package/jalaliday) as jalali and georgian date package
+- [`persian-tools2`](https://www.npmjs.com/package/persian-tools2) as persian utility library
+- [`@sentry/react`](https://www.npmjs.com/package/@sentry/react) as bug and performance tracking library (service)
 
 ### State Management Libraries
 
@@ -36,15 +59,13 @@ This project has some installed packages to facilitate the boring process of sta
 
 - `react-hook-form`
 
-### Other
+### Lint Libraries and Dev Dependencies
 
-- `axios` as HTTP client
-- `react-responsive` with `useDevice` hook
-- `react-router-dom`
-- `react-helmet`
-- `eslint` with `airbnb` rule and `prettier`
+- `eslint` with `airbnb` and `prettier`
+- `husky` with `lint-staged` which is configured based on `eslint` and `prettier`
+- [`cross-env`](https://www.npmjs.com/package/cross-env)(to solve env var issue between OSs)
 
-## `src` Directory Structure
+## Boilerplate Structure
 
 ### APIs
 
@@ -58,11 +79,15 @@ There is a `index.js` file which contains axios interceptor. You can config axio
 
 Hooks of project should be added to this direcotry. There is a common `useDevice` hook in this directory
 
-#### useDevice
+#### `useDevice`
 
 this hook uses `react-responsive` under the hood and provide some properties which can be used to determine the user device resolution and make decision based on them.
 
 ### Utils
+
+#### `date`
+
+This file configs `dayjs` with `jalaliday` as jalali plugin for it. Also contains some utility functions of them.
 
 ---
 
