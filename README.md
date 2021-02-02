@@ -23,6 +23,7 @@ This is a boilerplate which is supposed to be a starter template for front-end t
     - `useDevice`
   - [Utils](#Utils)
     - `date`
+- [Other Configs](#Other-Configs)
 - [Available Scripts](#Available-Scripts)
 - [Learn More](#Learn-More)
 
@@ -88,6 +89,12 @@ this hook uses `react-responsive` under the hood and provide some properties whi
 #### `date`
 
 This file configs `dayjs` with `jalaliday` as jalali plugin for it. Also contains some utility functions of them.
+
+## Other Configs
+
+- absolute path has configured in `craco.config.js` (webpack config), `jsconfig.json`(IDE config) and `eslintrc.js` (ESLint config) to replace and recognize `@utils` path as `./src/utils` based on root directory. this config prevents **relative path hell**!
+
+- Less has been configured in `craco.config.js`. Now the boilerpalte supports Less.
 
 ---
 
