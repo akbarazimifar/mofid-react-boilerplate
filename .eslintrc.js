@@ -47,12 +47,13 @@ module.exports = {
     ],
 
     // Warn
-    'react/jsx-props-no-spreading': 'warn',
     'no-unused-expressions': 'warn',
     'no-unused-vars': 'warn',
     'no-console': 'warn',
 
     // Off
+    'react/jsx-props-no-spreading': 'off',
+    'react/prop-types': 'off',
     'react/react-in-jsx-scope': 'off',
     'import/prefer-default-export': 'off',
     'no-shadow': 'off',
