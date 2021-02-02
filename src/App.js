@@ -1,6 +1,22 @@
-import * as Sentry from '@sentry/react';
-import logo from './logo.svg';
-import './App.css';
+import { lazy, Suspense } from 'react';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Redirect,
+} from 'react-router-dom';
+import { Helmet } from 'react-helmet';
+import { ErrorBoundary } from '@sentry/react';
+import { ConfigProvider } from 'antd';
+import faIR from 'antd/lib/locale/fa_IR';
+
+import './App.less';
+
+// Layout
+import MainLayout from '@layouts/MainLayout';
+
+// Pages
+const Samples = lazy(() => import('./pages/samples'));
 
 function FallbackComponent() {
   return <div>An error has occured.</div>;
@@ -8,24 +24,26 @@ function FallbackComponent() {
 
 function App() {
   return (
-    <Sentry.ErrorBoundary fallback={FallbackComponent}>
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
-    </Sentry.ErrorBoundary>
+    <>
+      <Helmet>
+        <title>Mofid React Boilerplate</title>
+      </Helmet>
+      <ErrorBoundary fallback={FallbackComponent}>
+        {/* AntDesign Config Provider */}
+        <ConfigProvider locale={faIR} direction="rtl">
+          <Suspense fallback="">
+            <Router>
+              <MainLayout>
+                <Switch>
+                  <Route path="/samples" component={Samples} />
+                  <Route render={() => <Redirect to="samples" />} />
+                </Switch>
+              </MainLayout>
+            </Router>
+          </Suspense>
+        </ConfigProvider>
+      </ErrorBoundary>
+    </>
   );
 }
 
