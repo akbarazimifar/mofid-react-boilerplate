@@ -16,6 +16,20 @@ module.exports = {
     ecmaVersion: 2018, // Allows for the parsing of modern ECMAScript features
     sourceType: 'module', // Allows for the use of imports
   },
+  settings: {
+    'import/resolver': {
+      alias: {
+        map: [
+          ['@components', './src/components'],
+          ['@constants', './src/constants'],
+          ['@hooks', './src/hooks'],
+          ['@layouts', './src/layouts'],
+          ['@pages', './src/pages'],
+          ['@utils', './src/utils'],
+        ],
+      },
+    },
+  },
   rules: {
     'react/jsx-filename-extension': [
       1,
