@@ -1,7 +1,7 @@
 import { NavLink } from 'react-router-dom';
-import { Row, Col, Layout, Menu, Typography } from 'antd';
+import { Row, Col, Layout, Menu } from 'antd';
 
-const { Title } = Typography;
+// const { Title } = Typography;
 const { Header, Footer } = Layout;
 
 const SamplesLayout = ({ children }) => (
@@ -9,9 +9,9 @@ const SamplesLayout = ({ children }) => (
     <Header>
       <Row align="middle">
         <Col span={4}>
-          <Title level={4} type="secondary">
+          {/* <Title level={4} type="secondary">
             مفید - نسخه نمایشی
-          </Title>
+          </Title> */}
         </Col>
         <Col span={20}>
           <Menu theme="dark" mode="horizontal" defaultSelectedKeys={['2']}>

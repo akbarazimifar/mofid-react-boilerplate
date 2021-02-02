@@ -4,14 +4,16 @@ import { Switch, Route, Redirect } from 'react-router-dom';
 // Layout
 import SamplesLayout from '@layouts/SamplesLayout';
 
-const Login = lazy(() => import('@pages/samples/Login'));
+const LoginForm = lazy(() => import('@pages/samples/forms/LoginForm'));
+const DateForm = lazy(() => import('@pages/samples/forms/DateForm'));
 
 const index = () => (
   <Suspense fallback="Loading...">
     <SamplesLayout>
       <Switch>
-        <Route path="/samples/login" component={Login} />
-        <Route render={() => <Redirect to="/samples/login" />} />
+        <Route path="/samples/forms/login" component={LoginForm} />
+        <Route path="/samples/forms/date" component={DateForm} />
+        <Route render={() => <Redirect to="/samples/forms/login" />} />
       </Switch>
     </SamplesLayout>
   </Suspense>

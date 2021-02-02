@@ -1,4 +1,5 @@
-import { Form, Input, Button, Checkbox } from 'antd';
+import { useState } from 'react';
+import { Form, Input, Button, Checkbox, message } from 'antd';
 
 import SampleLayout from '@layouts/SampleLayout';
 
@@ -16,9 +17,21 @@ const tailLayout = {
   },
 };
 
-const Login = () => {
+const LoginForm = () => {
+  const [formIsLoading, setFormIsLoading] = useState(false);
+
   const onFinish = (values) => {
-    console.log('Success:', values);
+    setFormIsLoading(true);
+    const key = 'formSuccess';
+    message.loading({ content: 'درحال ورود...', key });
+    setTimeout(() => {
+      setFormIsLoading(false);
+      message.success({
+        content: 'با موفقیت وارد شدید',
+        key,
+        duration: 2.5,
+      });
+    }, 2000);
   };
 
   const onFinishFailed = (errorInfo) => {
@@ -26,7 +39,10 @@ const Login = () => {
   };
 
   return (
-    <SampleLayout title="ورود">
+    <SampleLayout
+      title="ورود"
+      description="این فرم بدون استفاده از react-hook-form ساخته شده است."
+    >
       <Form
         {...layout}
         name="basic"
@@ -67,7 +83,12 @@ const Login = () => {
         </Form.Item>
 
         <Form.Item {...tailLayout}>
-          <Button type="primary" htmlType="submit" size="large">
+          <Button
+            type="primary"
+            htmlType="submit"
+            size="large"
+            loading={formIsLoading}
+          >
             ورود
           </Button>
         </Form.Item>
@@ -76,4 +97,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default LoginForm;
