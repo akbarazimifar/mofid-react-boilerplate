@@ -45,6 +45,8 @@ module.exports = {
         jsx: 'never',
       },
     ],
+    // If you're using unix-based OS, then set linebreak style in your IDE to CRLF
+    'linebreak-style': ['error', 'windows'],
 
     // Warn
     'no-unused-expressions': 'warn',
