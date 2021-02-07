@@ -8,7 +8,7 @@ This project is based on [Create React App](https://github.com/facebook/create-r
 
 This is a boilerplate which is supposed to be a starter template for front-end teams of [Mofid Securities](emofid.ir) company.
 
-> **Note**: This boilerplate DOES NOT support TypeScript files. If you wanna use TS, you should add TS support manually.
+> **Note**: This boilerplate supports TypeScript files, but base files and components are written in JavaScript.
 
 ## Table of Content
 

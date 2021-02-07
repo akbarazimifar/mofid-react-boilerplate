@@ -1,4 +1,4 @@
-import React from 'react';
+import { StrictMode } from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import * as Sentry from '@sentry/react';
@@ -21,11 +21,11 @@ if (
 }
 
 ReactDOM.render(
-  <React.StrictMode>
+  <StrictMode>
     <Provider store={configureStore}>
       <App />
     </Provider>
-  </React.StrictMode>,
+  </StrictMode>,
   document.getElementById('root')
 );
 
