@@ -22,7 +22,7 @@ const SamplesLayout = ({ children }) => {
         <Menu
           mode="inline"
           selectedKeys={[location.pathname]}
-          defaultOpenKeys={['forms']}
+          defaultOpenKeys={[SampleRoutes[0].route]}
           style={{ height: '100%', borderRight: 0 }}
         >
           {SampleRoutes.map((sampleRoute) => (
