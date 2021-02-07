@@ -8,6 +8,7 @@ import { SampleRoutes } from '@constants/routes';
 import SamplesLayout from '@layouts/SamplesLayout';
 
 const LoginForm = lazy(() => import('@pages/samples/forms/LoginForm'));
+const RHFLoginForm = lazy(() => import('@pages/samples/forms/RHFLoginForm'));
 const DateForm = lazy(() => import('@pages/samples/forms/DateForm'));
 const CustomizedButton = lazy(() =>
   import('@pages/samples/components/CustomizedButton')
@@ -18,6 +19,7 @@ const index = () => (
     <SamplesLayout>
       <Switch>
         <Route path="/samples/forms/login" component={LoginForm} />
+        <Route path="/samples/forms/rhf-login" component={RHFLoginForm} />
         <Route path="/samples/forms/date" component={DateForm} />
 
         <Route

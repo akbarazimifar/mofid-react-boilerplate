@@ -18,6 +18,10 @@ export const SampleRoutes = [
         title: 'ورود',
       },
       {
+        route: 'forms/rhf-login',
+        title: 'ورود - RHF',
+      },
+      {
         route: 'forms/date',
         title: 'تاریخ',
       },
