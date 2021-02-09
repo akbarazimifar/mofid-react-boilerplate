@@ -5,9 +5,16 @@ const options = {};
 const axiosInstance = axios.create(options);
 
 axiosInstance.interceptors.request.use(
-  (config) =>
-    // Manipulate config, such as adding a token to the header
-    config,
+  (config) => {
+    const authToken = localStorage.getItem('token');
+    if (authToken !== null) {
+      // Add authToken to request header
+      // This `Bearer` sometimes (depending on server auth system) must be included in Auth field!
+      // eslint-disable-next-line no-param-reassign
+      config.headers.Authorization = `Bearer ${authToken}`;
+    }
+    return config;
+  },
   (error) => Promise.reject(error)
 );
 
