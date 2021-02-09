@@ -8,7 +8,7 @@ import SampleLayout from '@layouts/SampleLayout';
 
 const { Text } = Typography;
 
-const LoginForm = () => {
+const RHFLoginForm = () => {
   const [formIsLoading, setFormIsLoading] = useState(false);
   const { control, handleSubmit, errors } = useForm({
     defaultValues: {
@@ -106,4 +106,4 @@ const LoginForm = () => {
   );
 };
 
-export default LoginForm;
+export default RHFLoginForm;

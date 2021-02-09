@@ -22,6 +22,7 @@ module.exports = {
       '@layouts': path.join(path.resolve(__dirname, './src/layouts')),
       '@pages': path.join(path.resolve(__dirname, './src/pages')),
       '@utils': path.join(path.resolve(__dirname, './src/utils')),
+      '@store': path.join(path.resolve(__dirname, './src/store')),
     },
   },
 };

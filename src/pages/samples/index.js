@@ -7,11 +7,11 @@ import { SampleRoutes } from '@constants/routes';
 // Layout
 import SamplesLayout from '@layouts/SamplesLayout';
 
-const LoginForm = lazy(() => import('@pages/samples/forms/LoginForm'));
-const RHFLoginForm = lazy(() => import('@pages/samples/forms/RHFLoginForm'));
-const DateForm = lazy(() => import('@pages/samples/forms/DateForm'));
+const LoginForm = lazy(() => import('@pages/samples/forms/login-form'));
+const RHFLoginForm = lazy(() => import('@pages/samples/forms/rhf-login-form'));
+const DateForm = lazy(() => import('@pages/samples/forms/date-form'));
 const CustomizedButton = lazy(() =>
-  import('@pages/samples/components/CustomizedButton')
+  import('@pages/samples/components/customized-button')
 );
 
 const index = () => (

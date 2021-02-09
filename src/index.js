@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import * as Sentry from '@sentry/react';
 
-import configureStore from './configureStore';
+import configureStore from '@store/index';
 
 import App from './App';
 // eslint-disable-next-line import/no-named-as-default, import/no-named-as-default-member
