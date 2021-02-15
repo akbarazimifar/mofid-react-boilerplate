@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { Row, Col, Input, Button, Typography, message } from 'antd';
 import { useForm, Controller } from 'react-hook-form';
 
-import SampleLayout from '@layouts/SampleLayout';
+import SampleLayout from '@layouts/sample-layout';
 
 const { Text } = Typography;
 

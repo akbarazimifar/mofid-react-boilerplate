@@ -1,8 +1,8 @@
 import { takeEvery, put, all } from 'redux-saga/effects';
 
-import { AUTH_LOGIN } from './authConstants';
-import { loginRequest, loginResponse, loginFailed } from './authActions';
-import { setAuthToken, fakeLogin } from './authAPIs';
+import { AUTH_LOGIN } from './auth-constants';
+import { loginRequest, loginResponse, loginFailed } from './auth-actions';
+import { setAuthToken, fakeLogin } from './auth-apis';
 
 function* loginWorker(action) {
   const { username, password } = action.payload;

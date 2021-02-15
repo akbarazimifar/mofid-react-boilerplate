@@ -1,6 +1,6 @@
 import { Space, Typography, DatePicker, Divider } from 'antd';
 
-import SampleLayout from '@layouts/SampleLayout';
+import SampleLayout from '@layouts/sample-layout';
 
 const { Paragraph, Text, Link } = Typography;
 

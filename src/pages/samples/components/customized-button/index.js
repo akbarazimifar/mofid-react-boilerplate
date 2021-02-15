@@ -1,10 +1,10 @@
 import { Space, Divider } from 'antd';
 
 // Layouts
-import SampleLayout from '@layouts/SampleLayout';
+import SampleLayout from '@layouts/sample-layout';
 
 // Components
-import Button from '@components/customized/Button';
+import Button from '@components/customized/button';
 
 const CustomizedButton = () => (
   <SampleLayout

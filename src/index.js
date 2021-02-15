@@ -5,9 +5,9 @@ import * as Sentry from '@sentry/react';
 
 import configureStore from '@store/index';
 
-import App from './App';
+import App from './app';
 // eslint-disable-next-line import/no-named-as-default, import/no-named-as-default-member
-import reportWebVitals from './reportWebVitals';
+import reportWebVitals from './report-web-vitals';
 
 if (
   process.env.REACT_APP_SENTRY_ENABLED === 'true' ||

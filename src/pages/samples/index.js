@@ -5,7 +5,7 @@ import { Switch, Route, Redirect } from 'react-router-dom';
 import { SampleRoutes } from '@constants/routes';
 
 // Layout
-import SamplesLayout from '@layouts/SamplesLayout';
+import SamplesLayout from '@layouts/samples-layout';
 
 const LoginForm = lazy(() => import('@pages/samples/forms/login-form'));
 const RHFLoginForm = lazy(() => import('@pages/samples/forms/rhf-login-form'));

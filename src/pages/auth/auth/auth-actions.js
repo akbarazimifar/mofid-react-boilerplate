@@ -4,7 +4,7 @@ import {
   AUTH_LOGIN_FAILED,
   AUTH_LOGIN,
   AUTH_LOGOUT,
-} from './authConstants';
+} from './auth-constants';
 
 export const login = (username, password) => ({
   type: AUTH_LOGIN,

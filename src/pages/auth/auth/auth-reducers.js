@@ -3,7 +3,7 @@ import {
   AUTH_LOGIN_RESPONSE,
   AUTH_LOGIN_FAILED,
   AUTH_LOGOUT,
-} from './authConstants';
+} from './auth-constants';
 
 const initialState = {
   loading: false,

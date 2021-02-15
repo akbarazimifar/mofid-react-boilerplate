@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Form, Input, Button, Checkbox, message } from 'antd';
 
-import SampleLayout from '@layouts/SampleLayout';
+import SampleLayout from '@layouts/sample-layout';
 
 const layout = {
   labelCol: {
@@ -20,7 +20,7 @@ const tailLayout = {
 const LoginForm = () => {
   const [formIsLoading, setFormIsLoading] = useState(false);
 
-  const onFinish = (values) => {
+  const onFinish = () => {
     setFormIsLoading(true);
     const key = 'formSuccess';
     message.loading({ content: 'درحال ورود...', key });
@@ -35,6 +35,7 @@ const LoginForm = () => {
   };
 
   const onFinishFailed = (errorInfo) => {
+    // eslint-disable-next-line no-console
     console.log('Failed:', errorInfo);
   };
 
