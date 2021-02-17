@@ -10,7 +10,7 @@ import { ErrorBoundary } from '@sentry/react';
 import { ConfigProvider } from 'antd';
 import faIR from 'antd/lib/locale/fa_IR';
 
-import './style.less';
+import './app.less';
 
 // Layout
 import MainLayout from '@layouts/main-layout';
