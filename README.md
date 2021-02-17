@@ -8,7 +8,7 @@ This project is based on [Create React App](https://github.com/facebook/create-r
 
 This is a boilerplate which is supposed to be a starter template for front-end teams of [Mofid Securities](emofid.ir) company.
 
-> **Note**: This branch supports TypeScript files, but base files and components are written in JavaScript. you may wanna use `master` branch if you're sure that you won't use TypeScript at all.
+> **Note**: This branch DOES NOT TypeScript, If you wanna use TypeScript, use `typescript` branch.
 
 ## Table of Content
 

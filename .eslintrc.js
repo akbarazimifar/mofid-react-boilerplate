@@ -3,7 +3,6 @@ module.exports = {
     browser: true,
     node: true,
   },
-  parser: '@typescript-eslint/parser',
   extends: [
     'react-app',
     'airbnb',
@@ -18,18 +17,25 @@ module.exports = {
     sourceType: 'module', // Allows for the use of imports
   },
   settings: {
-    'import/parsers': {
-      '@typescript-eslint/parser': ['.ts', '.tsx'],
-    },
     'import/resolver': {
-      typescript: {},
+      alias: {
+        map: [
+          ['@components', './src/components'],
+          ['@constants', './src/constants'],
+          ['@hooks', './src/hooks'],
+          ['@layouts', './src/layouts'],
+          ['@pages', './src/pages'],
+          ['@utils', './src/utils'],
+          ['@store', './src/store'],
+        ],
+      },
     },
   },
   rules: {
     'react/jsx-filename-extension': [
       1,
       {
-        extensions: ['.js', '.jsx', 'tsx'],
+        extensions: ['.js', '.jsx'],
       },
     ],
     'import/extensions': [
@@ -38,8 +44,6 @@ module.exports = {
       {
         js: 'never',
         jsx: 'never',
-        ts: 'never',
-        tsx: 'never',
       },
     ],
     // If you're using unix-based OS, then set linebreak style in your IDE to CRLF
