@@ -10,5 +10,6 @@
       "@utils/*": ["utils/*"],
       "@store/*": ["store/*"]
     }
-  }
+  },
+  "exclude": ["node_modules", "dist"]
 }
