@@ -2,16 +2,18 @@
 
 ---
 
-# Getting Started with Mofid React Boilerplate
+## Getting Started with Mofid React Boilerplate
 
 This project is based on [Create React App](https://github.com/facebook/create-react-app) with some other pre-configured libraries and packages to facilitate the boring process of starting a project.
 
 This is a boilerplate which is supposed to be a starter template for front-end teams of [Mofid Securities](emofid.ir) company.
 
-> **Note**: This branch DOES NOT TypeScript, If you wanna use TypeScript, use `typescript` branch.
+> **Note**: This branch DOES NOT support TypeScript, If you wanna use TypeScript, use `typescript` branch.
 
 ## Table of Content
 
+- [Getting Started with Mofid React Boilerplate](#markdown-header-getting-started-with-mofid-react-boilerplate)
+- [Table of Content](#markdown-header-table-of-content)
 - [Installed Packages](#markdown-header-installed-packages)
   - [General Libraries](#markdown-header-general-libraries)
   - [State Management Libraries](#markdown-header-state-management-libraries)
@@ -24,15 +26,14 @@ This is a boilerplate which is supposed to be a starter template for front-end t
   - [Components](#markdown-header-components)
   - [Constants](#markdown-header-constants)
   - [Hooks](#markdown-header-hooks)
-    - `useDevice`
-  - [Layouts](#markdown-header-layouts)
+    - [`useDevice`](#markdown-header-usedevice)
   - [Pages](#markdown-header-pages)
   - [Store](#markdown-header-store)
   - [Utils](#markdown-header-utils)
-    - `date`
+    - [`date`](#markdown-header-date)
 - [Common Available Scripts](#markdown-header-common-available-scripts)
 - [New Available Scripts](#markdown-header-new-available-scripts)
-- [Learn More](#Learn-More)
+- [Learn More](#markdown-header-learn-more)
 
 ## Installed Packages
 
@@ -131,7 +132,7 @@ This file configs `dayjs` with `jalaliday` as jalali plugin for it. Also contain
 
 In the project directory, you can run:
 
-### `yarn start`
+### `yarn start` <!-- omit in toc -->
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
@@ -139,12 +140,12 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.\
 You will also see any lint errors in the console.
 
-### `yarn test`
+### `yarn test` <!-- omit in toc -->
 
 Launches the test runner in the interactive watch mode.\
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `yarn build`
+### `yarn build` <!-- omit in toc -->
 
 Builds the app for production to the `build` folder.\
 It correctly bundles React in production mode and optimizes the build for the best performance.
@@ -154,7 +155,7 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `yarn eject`
+### `yarn eject` <!-- omit in toc -->
 
 **Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
@@ -166,15 +167,15 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 
 ## New Available Scripts
 
-### `yarn lint`
+### `yarn lint` <!-- omit in toc -->
 
 run `eslint` on all files of `src` directory which ends with `js`, `jsx` and `json`
 
-### `yarn lint:fix`
+### `yarn lint:fix` <!-- omit in toc -->
 
 run `eslint` on whole project with `--fix` option.
 
-### `yarn prettier`
+### `yarn prettier` <!-- omit in toc -->
 
 run `prettier` on all files of `src` directory.
 
@@ -184,26 +185,26 @@ You can learn more in the [Create React App documentation](https://facebook.gith
 
 To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
+### Code Splitting <!-- omit in toc -->
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
+### Analyzing the Bundle Size <!-- omit in toc -->
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
+### Making a Progressive Web App <!-- omit in toc -->
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-### Advanced Configuration
+### Advanced Configuration <!-- omit in toc -->
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-### Deployment
+### Deployment <!-- omit in toc -->
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
-### `yarn build` fails to minify
+### `yarn build` fails to minify <!-- omit in toc -->
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
