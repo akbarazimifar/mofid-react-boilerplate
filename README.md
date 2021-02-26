@@ -20,6 +20,7 @@ This is a boilerplate which is supposed to be a starter template for front-end t
   - [Style Libraries](#markdown-header-style-libraries)
   - [Form Management Library](#markdown-header-form-management-library)
   - [Lint Libraries and Dev Dependencies](#markdown-header-lint-libraries-and-dev-dependencies)
+  - [Testing Libraries](#markdown-header-testing-libraries)
 - [Important Configs and Notes](#markdown-header-important-configs-and-notes)
 - [Boilerplate Structure](#markdown-header-boilerplate-structure)
   - [APIs](#markdown-header-apis)
@@ -31,6 +32,7 @@ This is a boilerplate which is supposed to be a starter template for front-end t
   - [Store](#markdown-header-store)
   - [Utils](#markdown-header-utils)
     - [`date`](#markdown-header-date)
+  - [\_\_test\_\_](#markdown-header-__test__)
 - [Common Available Scripts](#markdown-header-common-available-scripts)
 - [New Available Scripts](#markdown-header-new-available-scripts)
 - [Learn More](#markdown-header-learn-more)
@@ -71,6 +73,13 @@ This project has some installed packages. Here is the list of them:
 - `eslint` with `react-app`, `airbnb` and `prettier` config
 - `husky` with `lint-staged` which is configured based on `eslint` and `prettier`
 - [`cross-env`](https://www.npmjs.com/package/cross-env) (to solve env var issue between OSs)
+
+### Testing Libraries
+
+- `jest` as test runner
+- [`@testing-library/react`](https://www.npmjs.com/package/@testing-library/react) as React DOM testing utilites.
+
+> Note: Altough we haven't config any API mocking library, but it's recommended to use [`msw`](https://www.npmjs.com/package/msw) for this purpose and not using `fetch` or other real http client for testing APIs.
 
 ## Important Configs and Notes
 
@@ -125,6 +134,10 @@ All utility function should be added to this directory.
 #### `date`
 
 This file configs `dayjs` with `jalaliday` as jalali plugin for it. Also contains some utility functions of them.
+
+### \_\_test\_\_
+
+All tests should be added to this directory.
 
 ---
 
