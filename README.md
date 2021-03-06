@@ -1,41 +1,34 @@
-🚧 **_NOTE: This Documentation is under construction_** 🚧
-
----
-
-## Getting Started with Mofid React Boilerplate
+# Getting Started with Mofid React Boilerplate <!-- omit in toc -->
 
 This project is based on [Create React App](https://github.com/facebook/create-react-app) with some other pre-configured libraries and packages to facilitate the boring process of starting a project.
 
 This is a boilerplate which is supposed to be a starter template for front-end teams of [Mofid Securities](emofid.ir) company.
 
-> **Note**: This branch DOES NOT support TypeScript, If you wanna use TypeScript, use `typescript` branch.
+> **Note**: This branch DOES NOT support TypeScript, If you wanna have TypeScript support, use `typescript` branch.
 
-## Table of Content
+## Table of Content <!-- omit in toc -->
 
-- [Getting Started with Mofid React Boilerplate](#markdown-header-getting-started-with-mofid-react-boilerplate)
-- [Table of Content](#markdown-header-table-of-content)
-- [Installed Packages](#markdown-header-installed-packages)
-  - [General Libraries](#markdown-header-general-libraries)
-  - [State Management Libraries](#markdown-header-state-management-libraries)
-  - [Style Libraries](#markdown-header-style-libraries)
-  - [Form Management Library](#markdown-header-form-management-library)
-  - [Lint Libraries and Dev Dependencies](#markdown-header-lint-libraries-and-dev-dependencies)
-  - [Testing Libraries](#markdown-header-testing-libraries)
-- [Important Configs and Notes](#markdown-header-important-configs-and-notes)
-- [Boilerplate Structure](#markdown-header-boilerplate-structure)
-  - [APIs](#markdown-header-apis)
-  - [Components](#markdown-header-components)
-  - [Constants](#markdown-header-constants)
-  - [Hooks](#markdown-header-hooks)
-    - [`useDevice`](#markdown-header-usedevice)
-  - [Pages](#markdown-header-pages)
-  - [Store](#markdown-header-store)
-  - [Utils](#markdown-header-utils)
-    - [`date`](#markdown-header-date)
-  - [\_\_test\_\_](#markdown-header-__test__)
-- [Common Available Scripts](#markdown-header-common-available-scripts)
-- [New Available Scripts](#markdown-header-new-available-scripts)
-- [Learn More](#markdown-header-learn-more)
+- [Installed Packages](#installed-packages)
+  - [General Libraries](#general-libraries)
+  - [State Management Libraries](#state-management-libraries)
+  - [Style Libraries](#style-libraries)
+  - [Form Management Library](#form-management-library)
+  - [Lint Libraries and Dev Dependencies](#lint-libraries-and-dev-dependencies)
+  - [Testing Libraries](#testing-libraries)
+- [Important Configs and Notes](#important-configs-and-notes)
+- [Boilerplate Structure](#boilerplate-structure)
+  - [APIs](#apis)
+  - [Components](#components)
+  - [Constants](#constants)
+  - [Hooks](#hooks)
+    - [`useDevice`](#usedevice)
+  - [Pages](#pages)
+  - [Store](#store)
+  - [Utils](#utils)
+    - [`date`](#date)
+- [Common Available Scripts](#common-available-scripts)
+- [New Available Scripts](#new-available-scripts)
+- [Learn More](#learn-more)
 
 ## Installed Packages
 
@@ -85,15 +78,15 @@ This project has some installed packages. Here is the list of them:
 
 - [`craco`](https://www.npmjs.com/package/@craco/craco) is installed to customize webpack configs.
 
-- As it's mentions earlied, the branch supports TypeScript but it isn't used in the whole project as some developers may not be comfortable with it. the `master` branch doesn't support TypeScript at all.
+- As it's mentioned earlier, this branch doesn't support TypeScript, but there is a `typescript` branch that supports it.
 
-- The boilerpalte supports `Less`. It's configured in `craco.config.js`.
+- The boilerpalte supports [`Less`](http://lesscss.org/). It's configured in `craco.config.js`.
 
-- absolute path has configured in `craco.config.js` (webpack config), `tsconfig.json`(IDE config) and `eslintrc.js` (ESLint config) to replace and recognize `@utils` path as `./src/utils` based on root directory. this config prevents **relative path hell**!
+- absolute path has configured in `craco.config.js` (webpack config), `jsconfig.json`(IDE config) and `eslintrc.js` (ESLint config) (e.g., `@utils` path points to `./src/utils` directory). this config prevents **relative path hell**!
 
-- `husky` with `lint-stages` is configured in the boilerplate which runs `eslint` and `prettier` commands as git `pre-commit` commands.
+- `husky` with `lint-stages` is configured in the boilerplate which runs `eslint` and `prettier` commands as git `pre-commit` command.
 
-- The boilerplate uses `CRLF` as default end-of-line format. It's configured in `eslintrc.js`, `eslintrc.js` and prettier config in `package.json`. (Constant end-of-file format is better than tormenting inconsistencies. 😉). You may want to configure your IDE default end-of-file format manually. `vscode` end-of-line is configured in `.vscode/settings.json`
+- The boilerplate uses `CRLF` as default end-of-line format. It's configured in `eslintrc.js`, `eslintrc.js` and prettier config in `package.json`. (Constant end-of-line format is better than tormenting inconsistencies. 😉). You may want to configure your IDE default end-of-line format manually. `vscode` end-of-line is configured in `.vscode/settings.json`
 
 - The boilerplate uses [`kebab-case`](https://en.wiktionary.org/wiki/kebab_case) as default file-naming convension.
 
@@ -106,6 +99,8 @@ There is a `index.js` file which contains axios interceptor. You can config axio
 ### Components
 
 All componennts are there, such as customized `antd` components with `styled-components` which exist in `customized` directory.
+
+Each component directory, could have a `__test__` directory beside itself and all test files related to that component can be added there.
 
 ### Constants
 
@@ -123,21 +118,21 @@ this hook uses `react-responsive` under the hood and provide some properties whi
 
 All pages of the app should be added here. main pages categories specifes with directory name (such as `app.com/samples`)
 
+Each page directory, could have a `__test__` directory beside itself and all test files related to that page can be added there.
+
+Also all `reducers`, `actions`, `sagas` and `constants` files related to a page, exist in its own directory (checkout an example in `./src/pages/auth/auth`).
+
 ### Store
 
 store configuration, root reducer and root saga is here.
 
 ### Utils
 
-All utility function should be added to this directory.
+General utility functions should be added to this directory.
 
 #### `date`
 
 This file configs `dayjs` with `jalaliday` as jalali plugin for it. Also contains some utility functions of them.
-
-### \_\_test\_\_
-
-All tests should be added to this directory.
 
 ---
 
