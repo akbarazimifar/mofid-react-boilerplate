@@ -4,7 +4,7 @@ This project is based on [Create React App](https://github.com/facebook/create-r
 
 This is a boilerplate which is supposed to be a starter template for front-end teams of [Mofid Securities](emofid.ir) company.
 
-> **Note**: This branch DOES NOT support TypeScript, If you wanna have TypeScript support, use `typescript` branch.
+> **Note**: This branch supports TypeScript files, but base files and components are written in JavaScript (only one customized button is written in typescript as a sample). you may wanna use `master` branch if you're sure that you won't need TypeScript at all.
 
 ## Table of Content <!-- omit in toc -->
 
@@ -78,7 +78,7 @@ This project has some installed packages. Here is the list of them:
 
 - [`craco`](https://www.npmjs.com/package/@craco/craco) is installed to customize webpack configs.
 
-- As it's mentioned earlier, this branch doesn't support TypeScript, but there is a `typescript` branch that supports it.
+- As it's mentioned earlier, this branch does support TypeScript, but there is only one file that is written in typescript (`src/components/customized/button/index.tsx`). you may wanna use `master` branch if you don't need TypeScript support.
 
 - The boilerpalte supports [`Less`](http://lesscss.org/). It's configured in `craco.config.js`.
 
