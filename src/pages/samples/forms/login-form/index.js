@@ -63,7 +63,7 @@ const LoginForm = () => {
             },
           ]}
         >
-          <Input />
+          <Input aria-label="username" />
         </Form.Item>
 
         <Form.Item
@@ -76,7 +76,7 @@ const LoginForm = () => {
             },
           ]}
         >
-          <Input.Password />
+          <Input.Password aria-label="password" />
         </Form.Item>
 
         <Form.Item {...tailLayout} name="remember" valuePropName="checked">
@@ -85,10 +85,12 @@ const LoginForm = () => {
 
         <Form.Item {...tailLayout}>
           <Button
+            aria-label="submit-button"
             type="primary"
             htmlType="submit"
             size="large"
             loading={formIsLoading}
+            disabled={formIsLoading}
           >
             ورود
           </Button>
