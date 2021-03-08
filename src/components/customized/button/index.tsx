@@ -1,7 +1,9 @@
+import React from 'react';
 import { Button as AntButton } from 'antd';
+import { ButtonProps } from 'antd/lib/button/button';
 import styled from 'styled-components';
 
-const Button = styled(AntButton)`
+const Button: React.FunctionComponent<ButtonProps> = styled(AntButton)`
   /* Customize directly */
   border-radius: 15px;
 
